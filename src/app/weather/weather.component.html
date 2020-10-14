@@ -1,0 +1,24 @@
+<div>
+  <input type="text" [ngModel]="name">
+
+  <div *ngFor="let weather of response?.weather">
+    <div>{{ weather.main }} / {{ weather.description }}</div>
+    <img [src]="getImg(weather)" />
+  </div>
+
+  <div>
+    <div>Teplota: {{ response?.main?.temp }}</div>
+    <div>Pocit: {{ response?.main?.feels_like }}</div>
+  </div>
+
+  <div *ngIf="response">
+    Východ slunce: {{ getSunrise() }}
+  </div>
+  <div *ngIf="response">
+    Západ slunce: {{ getSunset() }}
+  </div>
+
+<!--  <pre>-->
+<!--    {{  response | json }}-->
+<!--  </pre>-->
+</div>
