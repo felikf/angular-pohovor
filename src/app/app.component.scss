@@ -1,0 +1,46 @@
+.container {
+  width: 700px;
+  padding: 24px;
+  border: 1px solid chartreuse;
+  border-radius: 10px;
+  margin: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  .control {
+    display: flex;
+
+    & :first-child {
+      margin-right: 12px;
+      width: 25%;
+    }
+
+    & :nth-child(2) {
+      margin-right: 24px;
+      width: 50%;
+    }
+
+    & :nth-child(3) {
+      margin-right: 24px;
+      width: 15%;
+    }
+
+    & :nth-child(4) {
+      width: 10%;
+    }
+  }
+
+  .value {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .debounced {
+    border: 1px solid red;
+  }
+
+  & > * {
+    margin-bottom: 18px;
+  }
+}
