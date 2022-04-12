@@ -31,16 +31,18 @@
     }
   }
 
-  .value {
-    font-weight: bold;
-    font-size: large;
-  }
-
   .debounced {
     border: 1px solid red;
   }
 
   & > * {
     margin-bottom: 18px;
+  }
+
+  .code {
+    border: 1px solid aqua;
+    border-radius: 10px;
+    background-color: lightcyan;
+    padding: 16px;
   }
 }

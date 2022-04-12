@@ -1,14 +1,20 @@
 <div class="container">
   <div class="control">
     <label for="slider">Slider: </label>
-    <mat-slider id="slider" [formControl]="control" min=0 max=100 appInputRef></mat-slider>
+    <mat-slider id="slider" [formControl]="control" min=0 max=10000 appInputRef></mat-slider>
     <div></div>
     <div></div>
   </div>
 
   <div class="control">
     <label for="debouncedInput">Debounced Input:</label>
-    <input id="debouncedInput" [formControl]="control" type="number" appDebounceInput #appDebounce="appDebounce" class="debounced"/>
+    <input id="debouncedInput"
+           [formControl]="control" type="text"
+           appDebounceInput
+           #appDebounce="appDebounce"
+           class="debounced"
+    />
+<!--    mask="separator.0"-->
     <label for="debouncedTime">DebounceTime:</label>
     <input id="debouncedTime" type="number" value="500" #debounceTime (blur)="appDebounce.debounceTime = debounceTime.value"/>
   </div>
@@ -21,9 +27,9 @@
   </div>
 
   <div class="control">
-    <div></div>
-    <div class="value">
-      {{ control.value }}
+    <div>Model:</div>
+    <div class="code value">
+      {{ control.value | json }}
     </div>
     <div></div>
     <div></div>
