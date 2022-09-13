@@ -8,8 +8,9 @@ describe('FibonacciComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FibonacciComponent ]
-    })
+    declarations: [FibonacciComponent],
+    teardown: { destroyAfterEach: false }
+})
     .compileComponents();
   });
 
