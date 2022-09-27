@@ -32,7 +32,7 @@ jobs:
       - name: Install and Build
         run: |
           npm ci
-          npm run build --if-present
+          npm run build:gh --if-present
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
