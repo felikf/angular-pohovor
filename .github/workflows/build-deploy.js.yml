@@ -5,9 +5,9 @@ name: Build And Deploy
 
 on:
   push:
-    branches: [ "weather" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "weather" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -37,7 +37,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: weather
+          branch: main
           folder: dist/angular-pohovor
-    
     
