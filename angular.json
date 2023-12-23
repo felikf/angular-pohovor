@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-pohovor:build"
+            "buildTarget": "angular-pohovor:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-pohovor:build:production"
+              "buildTarget": "angular-pohovor:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-pohovor:build"
+            "buildTarget": "angular-pohovor:build"
           }
         },
         "test": {
@@ -114,6 +114,5 @@
         }
       }
     }
-  },
-  "defaultProject": "angular-pohovor"
+  }
 }
