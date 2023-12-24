@@ -10,23 +10,24 @@ import { Weather, WeatherModel } from '../model/weather.model';
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit {
-
   response: WeatherModel;
   name = 'Prague';
 
   constructor(
     private readonly configService: ConfigService,
-    private readonly http: HttpClient) {
-  }
+    private readonly http: HttpClient
+  ) {}
 
   ngOnInit(): void {
-    this.configService.configuration$
-      .subscribe(config => {
-        this.http.get<WeatherModel>(config.apiUrl + '/data/2.5/weather?q=' + this.name + '&' + 'appid=' + config.key + '&units=metric&lang=CZ')
-          .subscribe(response => {
-            this.response = response;
-          });
-      });
+    this.configService.configuration$.subscribe(config => {
+      this.http
+        .get<WeatherModel>(
+          config.apiUrl + '/data/2.5/weather?q=' + this.name + '&' + 'appid=' + config.key + '&units=metric&lang=CZ'
+        )
+        .subscribe(response => {
+          this.response = response;
+        });
+    });
   }
 
   getImg(weather: Weather): string {

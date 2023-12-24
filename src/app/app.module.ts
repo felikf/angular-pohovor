@@ -6,19 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WeatherComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  declarations: [AppComponent, WeatherComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, NgOptimizedImage],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
