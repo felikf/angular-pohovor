@@ -1,0 +1,22 @@
+<div class="sub-section">
+  @if (true) {
+    Není třeba container div / ng-container
+  }
+</div>
+
+<div class="sub-section">
+  @if (false) {
+    if
+  } @else if (false) {
+    else if
+  } @else {
+    else
+  }
+</div>
+
+<div class="sub-section">
+  @if (o$ | async; as o) {
+    {{ o }}
+  }
+
+</div>

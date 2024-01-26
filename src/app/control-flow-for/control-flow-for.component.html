@@ -1,0 +1,32 @@
+<div class="sub-section">
+
+  <div class="flex flex-row gap-12 justify-between">
+
+    @for (item of items; track item.id; let odd = $odd; let last = $last) {
+
+      <div class="border border-blue-400 rounded-2xl bg-blue-300 p-2 "
+           [ngClass]="{'bg-red-200': odd, 'bg-yellow-200': last}">
+        {{ item.name }} {{ $index }}
+      </div>
+    }
+
+  </div>
+</div>
+
+<div class="sub-section">
+
+    @for (item of empty; track item.id;) {
+      {{item.name}}
+    } @empty {
+      Seznam je prázdný.
+    }
+
+</div>
+
+
+<!--$count	Number of items in a collection iterated over-->
+<!--$index	Index of the current row-->
+<!--$first	Whether the current row is the first row-->
+<!--$last	Whether the current row is the last row-->
+<!--$even	Whether the current row index is even-->
+<!--$odd	Whether the current row index is odd-->

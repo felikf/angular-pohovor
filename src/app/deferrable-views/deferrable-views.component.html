@@ -1,0 +1,15 @@
+<div class="sub-section" style="height: 1000px">
+lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, adipisci alias aliquid amet aperiam asperiores atque autem beatae blanditiis consequatur consequuntur corporis cumque cupiditate delectus deleniti dicta dignissimos dolor doloremque doloribus ducimus ea eius eligendi error esse est et eum eveniet excepturi exercitationem expedita explicabo facere fugiat fugit harum hic id illum impedit in incidunt ipsa ipsum iste itaque iure iusto labore laboriosam laborum laudantium libero magnam magni maiores maxime minus molestiae mollitia natus necessitatibus nemo neque nihil nisi nobis non nostrum nulla numquam obcaecati odit officia officiis omnis optio pariatur perferendis perspiciatis placeat porro possimus praesentium provident quae quam quasi qui quia quibusdam quisquam quod quos ratione recusandae reiciendis repellat repellendus reprehenderit repudiandae rerum saepe sapiente sequi similique sit soluta sunt suscipit tempora tenetur totam ullam unde vel veniam veritatis voluptas voluptate voluptatem voluptates voluptatibus voluptatum.
+</div>
+
+
+@defer (on viewport) {
+  <div class="sub-section">
+
+    <pre>{{todos$ | async | json}}
+    </pre>
+
+  </div>
+} @placeholder (minimum 1000ms) {
+  <div> Loading </div>
+}
