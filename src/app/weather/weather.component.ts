@@ -5,9 +5,10 @@ import { ConfigService } from '../services/config.service';
 import { Weather, WeatherModel } from '../model/weather.model';
 
 @Component({
-  selector: 'app-weather',
-  templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.scss']
+    selector: 'app-weather',
+    templateUrl: './weather.component.html',
+    styleUrls: ['./weather.component.scss'],
+    standalone: false
 })
 export class WeatherComponent implements OnInit {
   response: WeatherModel;
