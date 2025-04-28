@@ -1,4 +1,3 @@
 # AngularPohovor
 
-[StackBlitz](https://stackblitz.com/github/felikf/angular-pohovor/tree/weather) 
-
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/felikf/angular-pohovor/tree/weather)
