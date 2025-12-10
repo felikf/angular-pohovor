@@ -1,17 +1,19 @@
 <div class="weather-card">
   <div>
     <input type="text" id="city"
-           [ngModel]="name"
-           placeholder="City"
-           required>
+      [ngModel]="name"
+      placeholder="City"
+      required>
   </div>
 
   <div class="weather-item-container">
-    <div *ngFor="let weather of response?.weather"
-          class="weather-item">
-      <div>{{ weather.main }} / {{ weather.description }}</div>
-      <img [ngSrc]="getImg(weather)" width="100" height="100"/>
-    </div>
+    @for (weather of response?.weather; track weather) {
+      <div
+        class="weather-item">
+        <div>{{ weather.main }} / {{ weather.description }}</div>
+        <img [ngSrc]="getImg(weather)" width="100" height="100"/>
+      </div>
+    }
 
   </div>
 
@@ -20,14 +22,18 @@
     <div>Pocit: {{ response?.main?.feels_like }}</div>
   </div>
 
-  <div *ngIf="response">
-    Východ slunce: {{ getSunrise() }}
-  </div>
-  <div *ngIf="response">
-    Západ slunce: {{ getSunset() }}
-  </div>
+  @if (response) {
+    <div>
+      Východ slunce: {{ getSunrise() }}
+    </div>
+  }
+  @if (response) {
+    <div>
+      Západ slunce: {{ getSunset() }}
+    </div>
+  }
 
   <!--  <pre>-->
   <!--    {{  response | json }}-->
-  <!--  </pre>-->
+<!--  </pre>-->
 </div>
